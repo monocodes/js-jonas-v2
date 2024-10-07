@@ -87,4 +87,43 @@ console.log(description);
  */
 
 /////////////////////////////////////////////////
-//
+// Strings and Template Literals
+/* 
+// 1. Recreate the description variable from the last assignment, this time using the template literal syntax.
+
+const language = 'german';
+const isIsland = false;
+const country = 'Germany';
+const continent = 'Europe';
+
+let population = 84;
+const description =
+  `${country} is in ${continent}, and its ${population} ` +
+  `million people speak ${language}`;
+console.log(description);
+ */
+
+/////////////////////////////////////////////////
+// Taking Decisions: if / else Statements
+/* 
+const language = 'german';
+const isIsland = false;
+const country = 'Germany';
+const continent = 'Europe';
+const population = 84;
+
+let averagePopulation = 33;
+
+if (population > 33) {
+  console.log(
+    `${country} population is ${
+      population - averagePopulation
+    } million above average`
+  );
+} else
+  console.log(
+    `${country} population is ${
+      averagePopulation - population
+    } million below average`
+  );
+ */
