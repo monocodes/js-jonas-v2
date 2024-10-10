@@ -81,7 +81,10 @@ const description =
   `million people speak ${language}`;
 console.log(description);
 
-// Wrap long template literal line to multiline without creating a new line in the string
+// Never break long strings at all as AirBnb guide suggests
+// https://github.com/airbnb/javascript#strings--line-length
+
+// Or wrap long template literal line to multiline without creating a new line in the string
 // https://stackoverflow.com/questions/37321047/wrap-long-template-literal-line-to-multiline-without-creating-a-new-line-in-the
 // Better to use "+" sign that backslash "/", it's more readable and won't cause unexpected spaces
  */
