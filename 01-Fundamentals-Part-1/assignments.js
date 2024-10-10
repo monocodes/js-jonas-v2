@@ -206,4 +206,62 @@ if (language === 'english' && population < 50 && !isIsland) {
  */
 
 /////////////////////////////////////////////////
+// The switch Statement
+/* 
+// Use a switch statement to log the following string for the given language:
+// chinese or mandarin: 'MOST number of native speakers!';
+// spanish: '2nd place in number of native speakers';
+// english: '3rd place';
+// hindi: 'Number 4';
+// arabic: '5th most spoken language';
+// for all other simply log 'Great language too :D'.
+
+const language = 'mandarin';
+
+switch (language) {
+  case 'chinese':
+  case 'mandarin':
+    console.log('MOST number of native speakers!');
+    break;
+  case 'spanish':
+    console.log('2nd place in number of native speakers');
+    break;
+  case 'english':
+    console.log('3rd place');
+    break;
+  case 'hindi':
+    console.log('Number 4');
+    break;
+  case 'arabic':
+    console.log('5th most spoken language');
+    break;
+  default:
+    console.log('Great language too :D');
+    break;
+}
+ */
+
+/////////////////////////////////////////////////
+// The Conditional (Ternary) Operator
+/* 
+// If your country's population is greater than 33 million, use the ternary operator to log a string like this to the console: "Portugal's population is above average". Otherwise, simply log "Portugal's population is below average". Notice how only one word change between these two sentences!
+
+// After checking the result, change the population temporarily to 13 and then to 130. See the different results, and set the population back to original.
+
+const language = 'german';
+const isIsland = false;
+const country = 'Germany';
+const continent = 'Europe';
+const population = 84;
+
+population > 33
+  ? console.log(`${country} population is above average`)
+  : console.log(`${country} population is below average`);
+
+console.log(
+  `${country} population is ${population > 33 ? 'above' : 'below'} average`
+);
+ */
+
+/////////////////////////////////////////////////
 //
