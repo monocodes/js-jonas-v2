@@ -31,7 +31,7 @@ console.log(describedSpain);
 
 // Call percentageOfWorld1 for 3 populations of countries of your choice, store the results into variables, and log them to the console.
 
-// // Create a function expression which does the exact same thing, called percentageOfWorld2, and also call it with 3 country populations (can be the same populations).
+// Create a function expression which does the exact same thing, called percentageOfWorld2, and also call it with 3 country populations (can be the same populations).
 
 // Function declaration
 function percentageOfWorld1(population) {
@@ -60,6 +60,45 @@ console.log(
   japanPopulationPercent2,
   spainPopulationPercent2
 );
+ */
+
+/////////////////////////////////////////////////
+// Arrow Functions
+/* 
+// 1. Recreate the last assignment, but this time create an arrow function called percentageOfWorld3.
+
+const percentageOfWorld3 = population => (population / 7900) * 100;
+const germanyPopulationPercent3 = percentageOfWorld3(84);
+const japanPopulationPercent3 = percentageOfWorld3(123);
+const spainPopulationPercent3 = percentageOfWorld3(47);
+console.log(
+  germanyPopulationPercent3,
+  japanPopulationPercent3,
+  spainPopulationPercent3
+);
+ */
+
+/////////////////////////////////////////////////
+// Functions Calling Other Functions
+/* 
+// Create a function called describePopulation. Use the function type you like the most. This function takes in two arguments: country and population, and returns a strings like this: 'China has 1441 million people, which is about 18.2% of the world'.
+
+// To calculate the percentage, describePopulation calls the percentageOfWorld1 you created earlier.
+
+// Call describePopulation with data for 3 countries of your choice.
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const describePopulation = function (country, population) {
+  const percPopulation = percentageOfWorld1(population);
+  return `${country} has ${population} million people, which is about ${percPopulation}% of the world `;
+};
+
+console.log(describePopulation('Germany', 84));
+console.log(describePopulation('Japan', 123));
+console.log(describePopulation('Spain', 47));
  */
 
 /////////////////////////////////////////////////
