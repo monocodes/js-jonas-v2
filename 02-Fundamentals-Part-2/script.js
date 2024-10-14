@@ -169,4 +169,46 @@ console.log(ages);
  */
 
 /////////////////////////////////////////////////
+// Basic Array Operations (Methods)
+/* 
+// Add elements to an array
+// .push(element) - adds an element to the end of the array
+const friends = ['Michael', 'Steven', 'Peter'];
+const newLength = friends.push('Jay'); // Return the length of the array
+console.log(friends);
+console.log(newLength);
+
+// .unshift(element) - adds an element to the start of the array
+friends.unshift('John');
+console.log(friends);
+
+// Remove elements from the array
+// .pop - removes an element from the start of the array
+friends.pop();
+const popped = friends.pop(); // Returns the last removed element
+console.log(popped);
+console.log(friends);
+
+// .shift - removes the first element from the array
+friends.shift();
+console.log(friends);
+
+// .indexOf(element) - indicates the position of element
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob')); // Returns -1
+
+// . includes(element) - indicates is there element in the array or not
+// Strict method
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes('23'));
+console.log(friends.includes(23));
+
+if (friends.includes('Steven')) {
+  console.log('You have a friend called Steven');
+}
+ */
+
+/////////////////////////////////////////////////
 //
