@@ -72,7 +72,7 @@ checkWinner(scoreDolphins2, scoreKoalas2);
 
 /////////////////////////////////////////////////
 // Challenge #2
-
+/* 
 // Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 
 // Your tasks:
@@ -90,13 +90,20 @@ checkWinner(scoreDolphins2, scoreKoalas2);
 let tip;
 
 const calcTip = function (bill) {
+  // Much better to use ternary operator here
+  // const calcTip = function (bill) {
+  //   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  // };
   if (bill >= 50 && bill <= 300) {
     tip = bill * 0.15;
   } else if (bill > 0) {
     tip = bill * 0.2;
-  }
+  } else return `Can't proceed when the bill is non-existent (${bill})`;
   return tip;
 };
+
+console.log(calcTip(0));
+console.log(calcTip(-1));
 
 console.log(calcTip(100));
 
@@ -114,3 +121,19 @@ totals.push(bills[0] + tips[0]);
 totals.push(bills[1] + tips[1]);
 totals.push(bills[2] + tips[2]);
 console.log(totals);
+
+// Jonas solution
+// const calcTip = function (bill) {
+//   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+// // const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// console.log(bills, tips, totals);
+ */
+
+/////////////////////////////////////////////////
+//
