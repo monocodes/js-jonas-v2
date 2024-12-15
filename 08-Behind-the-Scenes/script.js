@@ -2,7 +2,7 @@
 // Scoping in Practice
 
 'use strict';
-
+/* 
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
@@ -47,3 +47,51 @@ const firstName = 'Jonas';
 calcAge(1991);
 // console.log(age);
 // printAge();
+ */
+
+/////////////////////////////////////////////////
+// Hoisting and TDZ in Practice
+
+// Variables
+console.log(me); // undefined
+// console.log(job); // Uncaught ReferenceError: Cannot access 'job' before initialization
+// console.log(year); // Uncaught ReferenceError: Cannot access 'year' before initialization
+
+var me = 'Jonas';
+let job = 'teacher';
+const year = 1991;
+
+// Functions
+console.log(addDecl(2, 3));
+// console.log(addExpr(2, 3)); // Uncaught ReferenceError: Cannot access 'addExpr' before initialization
+console.log(addArrow); // undefined
+// console.log(addArrow(2, 3)); // Uncaught TypeError: addArrow is not a function
+
+function addDecl(a, b) {
+  return a + b;
+}
+
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+var addArrow = (a, b) => a + b;
+
+// Example
+console.log(undefined);
+console.log(numProducts);
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log('All products deleted!');
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x); // true
+console.log(x === window.y); // false
+console.log(x === window.z); // false
