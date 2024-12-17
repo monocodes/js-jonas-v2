@@ -51,7 +51,7 @@ calcAge(1991);
 
 /////////////////////////////////////////////////
 // Hoisting and TDZ in Practice
-
+/* 
 // Variables
 console.log(me); // undefined
 // console.log(job); // Uncaught ReferenceError: Cannot access 'job' before initialization
@@ -95,3 +95,47 @@ const z = 3;
 console.log(x === window.x); // true
 console.log(x === window.y); // false
 console.log(x === window.z); // false
+ */
+
+/////////////////////////////////////////////////
+// The this Keyword in Practice
+/* 
+// console.log(this);
+
+const calcAge = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAge(1991);
+
+const calcAgeArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this);
+};
+calcAgeArrow(1991);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+};
+jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+// Copy function from one object to another
+matilda.calcAge = jonas.calcAge;
+
+// this keyword is always point to an object that is calling the method
+matilda.calcAge();
+
+const f = jonas.calcAge;
+f();
+ */
+
+/////////////////////////////////////////////////
+// Regular Functions vs. Arrow Functions
