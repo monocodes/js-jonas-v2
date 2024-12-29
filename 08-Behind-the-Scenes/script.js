@@ -192,4 +192,51 @@ addArrow(2, 5, 8);
  */
 
 /////////////////////////////////////////////////
-// Memory Management: Primitives vs. Objects
+// Object References in Practice (Shallow vs. Deep Copies)
+/* 
+const jessica1 = {
+  firstName: 'Jessica',
+  lastName: 'Willians',
+  age: 27,
+};
+
+function marryPerson(originalPerson, newLastName) {
+  originalPerson.lastName = newLastName;
+  return originalPerson;
+}
+
+const marriedJessica = marryPerson(jessica1, 'Davis');
+
+// const marriedJessica = jessica1;
+// marriedJessica.lastName = 'Davis';
+
+console.log('Before:', jessica1);
+console.log('After:', marriedJessica);
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Willians',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+// Shallow copy
+// Creating shallow copy of the object with spread operator
+// But you'd better not do that because only primitives inside the objects will be copied, not objects such as arrays inside objects
+const jessicaCopy = { ...jessica };
+jessicaCopy.lastName = 'Davis';
+
+// jessicaCopy.family.push('Mary');
+// jessicaCopy.family.push('John');
+
+// console.log('Before:', jessica);
+// console.log('After:', jessicaCopy);
+
+// Deep copy/clone
+// To make the full clone use function structuredClone()
+const jessicaClone = structuredClone(jessica);
+jessicaClone.family.push('Mary');
+jessicaClone.family.push('John');
+console.log('Original:', jessica);
+console.log('Clone:', jessicaClone);
+ */
